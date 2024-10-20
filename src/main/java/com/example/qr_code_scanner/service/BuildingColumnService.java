@@ -31,9 +31,10 @@ public class BuildingColumnService {
         buildingColumn.setConstructionDate(buildingColumnRequest.getConstructionDate());
         buildingColumn.setStatus(buildingColumnRequest.getStatus());
         buildingColumn.setComments(buildingColumnRequest.getComments());
-        buildingColumn.setQrCode("3");
-        //String qrCode = qrCodeService.generateQRCode(buildingColumn); // Generate QR code with item ID
-        //buildingColumn.setQrCode(qrCode);
+
+        String qrCode = qrCodeService.generateQRCode(buildingColumn); // Generate QR code with item ID
+        buildingColumn.setQrCode(qrCode);
+        System.out.println("qr code : "+qrCode);
 
         // Set created date and last modified date
         buildingColumn.setCreatedDate(LocalDateTime.now());

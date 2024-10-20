@@ -31,7 +31,9 @@ public class BuildingColumn {
         this.qrCode = qrCode;
     }
 
+    @Column(name = "qr_code", columnDefinition = "TEXT")
     private String qrCode;
+
     @Column(name = "created_date", updatable = false)
     private LocalDateTime createdDate;
 
