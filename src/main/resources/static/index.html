@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <!-- Include Html5Qrcode library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+    <link rel="stylesheet" href="style.css"> <!-- Ensure this file exists -->
+</head>
+<body>
+<h1>QR Code Scanner</h1>
+<div id="reader" style="width: 600px;"></div>
+<button id="startButton">Start Scanning</button>
+
+<!-- Image Upload Interface -->
+<h2>Or Upload QR Code Image</h2>
+<input type="file" id="qrImageInput" accept="image/*">
+
+<h2>Search Item by QR Code</h2>
+<input type="text" id="qrCodeSearchInput" placeholder="Enter QR Code">
+<button id="searchButton">Search</button>
+<div id="searchResult"></div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
